@@ -2,7 +2,6 @@
 const router = useRouter()
 const route = useRoute('/hi/[name]')
 const user = useUserStore()
-const { t } = useI18n()
 
 watchEffect(() => {
   user.setNewName(route.params.name)
@@ -18,16 +17,16 @@ useHead({
       <div i-carbon-pedestrian inline-block />
     </div>
     <p>
-      {{ t('intro.hi', { name: user.savedName }) }}
+      intro.hi {{ user.savedName }}
     </p>
 
     <p text-sm opacity-75>
-      <em>{{ t('intro.dynamic-route') }}</em>
+      <em>intro.dynamic-route</em>
     </p>
 
     <template v-if="user.otherNames.length">
       <div mt-4 text-sm>
-        <span opacity-75>{{ t('intro.aka') }}:</span>
+        <span opacity-75>intro.aka:</span>
         <ul>
           <li v-for="otherName in user.otherNames" :key="otherName">
             <RouterLink :to="`/hi/${otherName}`" replace>
@@ -43,7 +42,7 @@ useHead({
         m="3 t6" btn text-sm
         @click="router.back()"
       >
-        {{ t('button.back') }}
+        button.back
       </button>
     </div>
   </div>

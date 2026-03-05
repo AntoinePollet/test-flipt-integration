@@ -10,11 +10,6 @@ function go() {
   if (name.value)
     router.push(`/hi/${encodeURIComponent(name.value)}`)
 }
-
-const { t } = useI18n()
-useHead({
-  title: () => t('button.home'),
-})
 </script>
 
 <template>
@@ -28,18 +23,18 @@ useHead({
       </a>
     </p>
     <p>
-      <em text-sm opacity-75>{{ t('intro.desc') }}</em>
+      <em text-sm opacity-75>intro.desc</em>
     </p>
 
     <div py-4 />
 
     <TheInput
       v-model="name"
-      :placeholder="t('intro.whats-your-name')"
+      placeholder="intro.whats-your-name"
       autocomplete="false"
       @keydown.enter="go"
     />
-    <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
+    <label class="hidden" for="input">intro.whats-your-name</label>
 
     <div>
       <button
@@ -47,7 +42,7 @@ useHead({
         :disabled="!name"
         @click="go"
       >
-        {{ t('button.go') }}
+        button.go
       </button>
     </div>
   </div>

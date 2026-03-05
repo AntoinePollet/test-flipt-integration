@@ -25,6 +25,16 @@ export default defineConfig({
     },
   },
 
+  server: {
+    proxy: {
+      '/flipt': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/flipt/, ''),
+      },
+    },
+  },
+
   plugins: [
     // https://github.com/vuejs/router
     VueRouter({

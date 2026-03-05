@@ -1,0 +1,61 @@
+version: '2.0'
+diagnostics:
+  profiling:
+    enabled: true
+cors:
+  enabled: true
+  allowed_origins:
+    - '*'
+  allowed_headers:
+    - Content-Type
+    - Authorization
+    - X-Requested-With
+    - x-flipt-environment
+log:
+  level: INFO
+  encoding: console
+  grpc_level: ERROR
+meta:
+  check_for_updates: true
+  telemetry_enabled: true
+server:
+  host: 0.0.0.0
+  protocol: http
+  http_port: 8080
+  https_port: 443
+  grpc_port: 9000
+environments:
+  default:
+    name: default
+    default: true
+    storage: default
+  production:
+    name: production
+    default: false
+    storage: production
+  development:
+    name: development
+    default: false
+    storage: development
+storage:
+  default:
+    backend:
+      type: memory
+    branch: main
+    poll_interval: 30s
+  production:
+    backend:
+      type: memory
+    branch: main
+    poll_interval: 30s
+  development:
+    backend:
+      type: memory
+    branch: main
+    poll_interval: 30s
+metrics:
+  enabled: true
+  exporter: prometheus
+ui:
+  enabled: true
+  default_theme: system

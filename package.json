@@ -3,7 +3,7 @@
   "private": true,
   "packageManager": "pnpm@10.30.2",
   "scripts": {
-    "build": "vite-ssg build",
+    "build": "vite build",
     "dev": "vite --port 3333 --open",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -28,8 +28,11 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:dev",
+    "@flipt-io/flipt-client-js": "catalog:dev",
     "@iconify-json/carbon": "catalog:dev",
     "@intlify/unplugin-vue-i18n": "catalog:build",
+    "@openfeature/flipt-web-provider": "catalog:dev",
+    "@openfeature/web-sdk": "catalog:dev",
     "@shikijs/markdown-it": "catalog:build",
     "@types/markdown-it-link-attributes": "catalog:types",
     "@types/nprogress": "catalog:types",
