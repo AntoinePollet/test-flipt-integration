@@ -6,4 +6,4 @@ flags:
     - key: show_button
       name: show_button
       type: BOOLEAN_FLAG_TYPE
-      enabled: false
+      enabled: true
