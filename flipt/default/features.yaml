@@ -1,0 +1,9 @@
+version: "1.5"
+namespace:
+    key: default
+    name: Default
+flags:
+    - key: show_button
+      name: show_button
+      type: BOOLEAN_FLAG_TYPE
+      enabled: false
