@@ -6,14 +6,14 @@ const fliptClient = inject(fliptClientKey)
 const showButtonFlag = ref(fliptClient?.value?.evaluateBoolean({
   flagKey: 'show_button',
   entityId: 'antoine.pollet@silex.legal',
-  context: { 'beta-user': 'false' },
+  context: { 'beta-user': 'true' },
 }))
 
-// const variant = ref(fliptClient?.value?.evaluateVariant({
-//   flagKey: 'button_variant',
-//   entityId: 'antoine.pollet@silex.legal',
-//   context: { 'beta-userrr': 'truee' },
-// }))
+const variant = ref(fliptClient?.value?.evaluateVariant({
+  flagKey: 'button_color',
+  entityId: 'antoine.pollet@silex.legal',
+  context: { 'beta-user': 'truee' },
+}))
 </script>
 
 <template>
@@ -26,6 +26,9 @@ const showButtonFlag = ref(fliptClient?.value?.evaluateBoolean({
       FF enabled
     </button>
     {{ showButtonFlag }}
+    <div>
+      {{ variant }}
+    </div>
     <div mx-auto mt-5 text-center text-sm opacity-50>
       [Home Layout]
     </div>
