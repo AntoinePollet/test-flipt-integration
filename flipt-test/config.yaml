@@ -1,4 +1,8 @@
 version: '2.0'
+credentials:
+  github:
+    access_token: ${env:GITHUB_ACCESS_TOKEN_FLIPT}
+    type: access_token
 diagnostics:
   profiling:
     enabled: true
@@ -32,12 +36,19 @@ environments:
   production:
     name: production
     default: false
-    storage: production
+    storage: github
   development:
     name: development
     default: false
-    storage: development
+    storage: github
 storage:
+  github:
+    backend:
+      type: memory
+    branch: main
+    credentials: github
+    poll_interval: 30s
+    remote: https://github.com/AntoinePollet/test-flipt-integration
   default:
     backend:
       type: memory
