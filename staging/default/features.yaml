@@ -1,0 +1,11 @@
+version: "1.5"
+namespace:
+    key: default
+    name: Default
+flags:
+    - key: show_faq
+      name: show_faq
+      type: BOOLEAN_FLAG_TYPE
+      enabled: false
+      metadata:
+        faq: Only for new users
