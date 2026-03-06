@@ -9,12 +9,6 @@ const showButtonFlag = ref(fliptClient?.value?.evaluateBoolean({
   context: { 'beta-user': 'true' },
 }))
 
-const amIEvilFlag = ref(fliptClient?.value?.evaluateBoolean({
-  flagKey: 'am_i_evil',
-  entityId: 'antoine.pollet@silex.legal',
-  context: { 'beta-user': 'true' },
-}))
-
 const variant = ref(fliptClient?.value?.evaluateVariant({
   flagKey: 'button_color',
   entityId: 'antoine.pollet@silex.legal',
@@ -32,7 +26,6 @@ const variant = ref(fliptClient?.value?.evaluateVariant({
       FF enabled
     </button>
     {{ showButtonFlag }}
-    {{ amIEvilFlag }}
     <div>
       {{ variant }}
     </div>
