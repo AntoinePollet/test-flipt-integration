@@ -16,3 +16,7 @@ flags:
           attachment: {}
         - key: blue
           attachment: {}
+segments:
+    - key: beta_user
+      name: beta_user
+      match_type: ALL_MATCH_TYPE
