@@ -6,7 +6,7 @@ flags:
     - key: show_onboarding
       name: show_onboarding
       type: BOOLEAN_FLAG_TYPE
-      enabled: true
+      enabled: false
       rollouts:
         - segment:
             keys:
