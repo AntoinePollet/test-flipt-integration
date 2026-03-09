@@ -19,4 +19,9 @@ flags:
 segments:
     - key: beta_user
       name: beta_user
+      constraints:
+        - type: STRING_COMPARISON_TYPE
+          property: beta_user
+          operator: eq
+          value: "true"
       match_type: ALL_MATCH_TYPE
