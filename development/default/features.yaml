@@ -7,3 +7,7 @@ flags:
       name: show_onboarding
       type: BOOLEAN_FLAG_TYPE
       enabled: false
+    - key: color
+      name: color
+      type: VARIANT_FLAG_TYPE
+      enabled: false
