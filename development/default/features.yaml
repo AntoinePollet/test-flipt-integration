@@ -11,3 +11,8 @@ flags:
       name: color
       type: VARIANT_FLAG_TYPE
       enabled: false
+      variants:
+        - key: red
+          attachment: {}
+        - key: blue
+          attachment: {}
